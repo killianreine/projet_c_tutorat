@@ -30,6 +30,9 @@ int est_dans_td(Etudiant, TD);
 int supprimer_td(Etudiant, TD);
 int ajouter_td(Etudiant, TD);
 
+// Création de l'enregistrement donné à la bdd
+char* creer_enregistrement(Etudiant);
+
 // Supprimer détruire l'étudiant
 int liberer_etudiant(Etudiant);
 

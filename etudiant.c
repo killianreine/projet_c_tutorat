@@ -131,3 +131,14 @@ int modifier_promo_etudiant(Etudiant* ptrEtu, char* _promoEtu){
     strcpy(ptrEtu->promo, _promoEtu);
     return 1;
 }
+
+char* creer_enregistrement(Etudiant etu){
+    size_t taille = sizeof(etu.prenom)+sizeof(etu.promo)+sizeof(etu.nom)+30;
+    char* enregistrement = malloc(taille);
+    if(!enregistrement){
+        perror("Erreur dans le malloc");
+        exit(EXIT_FAILURE);
+    }
+    sprintf(enregistrement, "%d;%s;%s;%s\n", etu.numeroEtu, etu.nom, etu.prenom, etu.promo);
+    return enregistrement;
+}
