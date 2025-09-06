@@ -13,6 +13,8 @@ int main(){
 
     modifier_numero_etudiant(&rk230026, 230026);
     modifier_prenom_etudiant(&rk230026, "Killian");
+    modifier_nom_etudiant(&rk230026, "Reine");
+    modifier_promo_etudiant(&rk230026, "ST L3 INFORMATIQUE");
     printf("Informations personnelles\n|- Numero etu : %d\n|- Nom Prénom : %s %s\n|- Promo : %s\n",rk230026.numeroEtu, rk230026.nom, rk230026.prenom, rk230026.promo);
 
     printf("FIN...\n");

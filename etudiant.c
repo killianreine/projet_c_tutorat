@@ -105,9 +105,9 @@ int modifier_nom_etudiant(Etudiant* ptrEtu, char* _nomEtu){
         // Une erreur
         return 0;
     }
-    free(ptrEtu->prenom);
-    ptrEtu->prenom=temp;
-    strcpy(ptrEtu->prenom, _nomEtu);
+    free(ptrEtu->nom);
+    ptrEtu->nom=temp;
+    strcpy(ptrEtu->nom, _nomEtu);
     return 1;
 }
 
