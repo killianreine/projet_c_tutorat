@@ -89,3 +89,45 @@ int modifier_prenom_etudiant(Etudiant* ptrEtu, char* _prenomEtu){
     strcpy(ptrEtu->prenom, _prenomEtu);
     return 1;
 }
+
+/**
+ * Fonction permettant de modifier le nom d'un étudiant
+ * @param
+ *      Etudiant*   ptrEtu          >>> Le pointeur vers l'étudiant
+ *      char*       _nomEtu      >>> Le nouveau nom de l'étudiant
+ * @return
+ *      int         (booléen)       >>> 1=succès ; 0=échec
+ */
+int modifier_nom_etudiant(Etudiant* ptrEtu, char* _nomEtu){
+    // Nouveau tableau dynamique temporaire pour le nouveau nom
+    char* temp = malloc(strlen(_nomEtu)+1);
+    if(!temp){
+        // Une erreur
+        return 0;
+    }
+    free(ptrEtu->prenom);
+    ptrEtu->prenom=temp;
+    strcpy(ptrEtu->prenom, _nomEtu);
+    return 1;
+}
+
+/**
+ * Fonction permettant de modifier la promotion d'un étudiant
+ * @param
+ *      Etudiant*   ptrEtu          >>> Le pointeur vers l'étudiant
+ *      char*       _promoEtu      >>> La nouvelle promotion de l'étudiant
+ * @return
+ *      int         (booléen)       >>> 1=succès ; 0=échec
+ */
+int modifier_promo_etudiant(Etudiant* ptrEtu, char* _promoEtu){
+    // Nouveau tableau dynamique temporaire pour la nouvelle promo
+    char* temp = malloc(strlen(_promoEtu)+1);
+    if(!temp){
+        // Une erreur
+        return 0;
+    }
+    free(ptrEtu->promo);
+    ptrEtu->promo=temp;
+    strcpy(ptrEtu->promo, _promoEtu);
+    return 1;
+}
