@@ -17,9 +17,9 @@ Etudiant creer_etudiant(int, char*, char*, char*);
 
 // Opérations de bases sur un étudiant
 int modifier_numero_etudiant(Etudiant*, int);
-int modifier_nom_etudiant(Etudiant, char*);
+int modifier_nom_etudiant(Etudiant*, char*);
 int modifier_prenom_etudiant(Etudiant*, char*);
-int modifier_promo_etudiant(Etudiant, char*);
+int modifier_promo_etudiant(Etudiant*, char*);
 
 // Affichage de l'étudiant
 void afficher_etudiant(Etudiant);
